@@ -25,6 +25,7 @@ def create():
         desc = request.form.get("text")
         for key, value in request.files.items():
             print(key, value)
+            
             file=request.files[key]
             if file:
                 filename = secure_filename(file.filename)
